@@ -1,0 +1,209 @@
+@import "fonts.less"; // Modify this for custom colors, font-sizes, etc
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+
+
+/* DEBUGGING */
+/*
+.container {
+	background: rgba(0,200,0,0.3);
+	position: relative;
+}
+
+.page {
+	background: rgba(0,0,200,0.3);
+}*/
+/* /DEBUGGING */
+
+/* GENERAL */
+* {
+	font-family: 'DIN', sans-serif;
+}
+
+.row-fluid [class*="span"].offset-one-half {
+	margin-left: 5.555555555555555%;
+}
+@media (max-width: 767px) {
+	body {
+		padding: 0;
+	}
+	.row-fluid [class*="span"].offset-one-half {
+		margin-left: 0; /* Not when the cells become rows */
+	}
+}
+/* /GENERAL */
+
+/* PAGES-GENERAL */
+.page .navbar-inner {
+	background: none;
+	border: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+
+	text-align:center;
+	/*min-height: 68px;*/
+}
+
+.page .navbar .brand {
+	float: left;
+	margin: 24px 0px;
+	padding: 0px;
+	position: relative;
+	z-index: 1;
+}
+
+.page .navbar .social {
+	float: right;
+	margin: 20px 0px;
+	padding: 0px;
+	.social-button {
+		float: right;
+		height: 28px;
+		width: 28px;
+		display: inline-block;
+		margin-left: 6px;
+	}
+	position: relative;
+	z-index: 1;
+}
+
+.page .navbar .nav {
+	margin: 24px 0px;
+}
+
+.page .navbar .nav,
+.page .navbar .nav > li {
+	float:none;
+	display:inline-block;
+	*display:inline; /* ie7 fix */
+	*zoom:1; /* hasLayout ie7 trigger */
+	vertical-align: top;
+}
+
+.page .navbar .nav > li > a,
+.page .navbar .nav > li > a:hover,
+.page .navbar .nav > li > a:focus {
+	background: none;
+	border: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
+	font-size: 13pt;
+	padding: 0px 15px 0px 15px;
+}
+.navbar .btn,
+.navbar .btn-group {
+	margin-top: 0px;
+	margin-left: 6px;
+}
+
+.page h1,
+.page h2,
+.page h3 {
+	margin-left: 5%;
+	margin-right: 5%;
+	line-height: 90%;
+}
+
+.page h1 {
+	font-family: 'DIN UltraLight', sans-serif;
+	font-style: italic;
+	font-size: 64pt;
+	font-weight: normal;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+
+.page h2 {.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+	font-family: 'DIN Light', sans-serif;
+	font-style: italic;
+	font-size: 20pt;
+	font-weight: normal;
+}
+/* /PAGES-GENERAL */
+
+/* PAGE-CUSTOMIZATION */
+
+/* PAGE #1 */
+
+.page#page1 {
+	/*background-image: url(img/);*/
+}
+.page#page1 h2 {
+	max-width: 500px;
+}
+
+.page#page1 .navbar a,
+.page#page1 .navbar a:hover,
+.page#page1 .navbar a:focus {
+	color: #404040;
+}
+.page#page1 #github-button { background-image: url("../img/github-black.png"); }
+.page#page1 #linkedin-button { background-image: url("../img/linkedin-black.png"); }
+.page#page1 #twitter-button { background-image: url("../img/twitter-black.png"); }
+
+/* PAGE #2 */
+
+.page#page2 {
+	/* Gradient bg from #0067dd in the center to #005bc4 */
+	background: #0067dd; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #0067dd 0%, #005bc4 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#0067dd), color-stop(100%,#005bc4)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #0067dd 0%,#005bc4 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #0067dd 0%,#005bc4 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #0067dd 0%,#005bc4 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center, #0067dd 0%,#005bc4 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0067dd', endColorstr='#005bc4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	color: white;
+}
+.page#page2 .navbar a,
+.page#page2 .navbar a:hover,
+.page#page2 .navbar a:focus {
+	color: white;
+}
+.page#page2 #github-button { background-image: url("../img/github-white.png"); }
+.page#page2 #linkedin-button { background-image: url("../img/linkedin-white.png"); }
+.page#page2 #twitter-button { background-image: url("../img/twitter-white.png"); }
+
+.page#page2 .row-of-icons {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.page#page2 .row-of-icons span {
+	padding-top: 1em;
+	font-family: 'DIN Light', sans-serif;
+	font-size: 23pt;
+	clear: left;
+	display: block;
+}
+
+.page#page2 .row-of-icons .understandable-icon img {
+	margin-top: 50px;
+	margin-bottom: 9px;
+}
+.page#page2 .row-of-icons .practical-icon img {
+	margin-top: 60px;
+	margin-bottom: 13px;
+}
+.page#page2 .row-of-icons .valuable-icon img {
+}
+.page#page2 .row-of-icons .plus-icon img {
+	margin-top: 115px;
+	margin-bottom: 42px;
+}
+
+
+/* /PAGE-CUSTOMIZATION */
+
+body {
+	/*padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
