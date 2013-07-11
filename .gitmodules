@@ -1,3 +1,6 @@
 [submodule "bootstrap"]
 	path = bootstrap
 	url = https://github.com/twitter/bootstrap
+[submodule "jquery.snapscroll"]
+	path = jquery.snapscroll
+	url = https://github.com/wtm/jquery.snapscroll.git
