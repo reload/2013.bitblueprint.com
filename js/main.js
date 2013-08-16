@@ -4,9 +4,6 @@
 		var windowHeight = $(window).height();
 		$(".page").css("min-height", windowHeight);
 	}
-	$(window).resize(adjustPageHeights);
-	adjustPageHeights();
-
 	$("a[href^='#']").click(function(e) {
 		e.preventDefault();
 		var hash = $(e.target).attr("href");
@@ -14,30 +11,31 @@
 		hash = hash.substring(1);
 		$.scrollTo("a[name='"+ hash +"']", 300);
 	});
-	
-	if(history.pushState) { // check if the browser supports the pushState
-		$(window).scroll(function(e) {
-			$this = $(this);
-			if($this.data('scrollUpdateHashTimeout')) {
-				clearTimeout($this.data('scrollUpdateHashTimeout'));
+
+	function updatePage() {
+		var scrollTop = $(window).scrollTop();
+		var navbarHeight = $("body > .navbar").height();
+		var currentAnchor = null;
+		// Loop though anchors to see which is the last above the viewport.
+		$("a[name]").each(function() {
+			var offsetTop = $(this).offset().top;
+			if(scrollTop - offsetTop + navbarHeight >= 0) {
+				currentAnchor = this;
 			}
-			$this.data('scrollUpdateHashTimeout', setTimeout(function() {
-				var scrollTop = $(window).scrollTop();
-				var closestAnchor = null;
-				var closestAnchorOffsetTop = null;
-				// Loop though anchors to see which is closest.
-				$("a[name]").each(function() {
-					var offsetTop = $(this).offset().top;
-					if(closestAnchor == null || Math.abs(scrollTop - closestAnchorOffsetTop) > Math.abs(scrollTop - offsetTop)) {
-						closestAnchor = this;
-						closestAnchorOffsetTop = offsetTop;
-					}
-				});
-				if(closestAnchor) {
-					// Update the hash.
-					history.pushState({}, "", "#"+$(closestAnchor).attr("name"));
-				}
-			}, 100));
 		});
+		if(currentAnchor && (!$(window).data('currentAnchor') || $(window).data('currentAnchor') != currentAnchor)) {
+			$(window).data('currentAnchor', currentAnchor);
+			if(history.pushState) { // check if the browser supports the pushState
+				// Update the hash.
+				history.pushState({}, "", "#"+$(currentAnchor).attr("name"));
+			}
+			// Update the navbar classes.
+			var navbarColor = $(currentAnchor).data("navbar-color");
+			$("body > .navbar").removeClass("white blue marine black").addClass(navbarColor);
+		}
 	}
+	
+	$(window).scroll(updatePage);
+	$(window).resize(adjustPageHeights);
+	adjustPageHeights();
 })(jQuery);
