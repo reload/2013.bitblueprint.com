@@ -9,7 +9,7 @@
 		var hash = $(e.target).attr("href");
 		if(!hash) hash = "";
 		hash = hash.substring(1);
-		$.scrollTo("a[name='"+ hash +"']", 300);
+		$.scrollTo("a[name='"+ hash +"']", 300, {offset: {top: 0}});
 	});
 
 	function updatePage() {
