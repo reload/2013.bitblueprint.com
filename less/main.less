@@ -36,6 +36,21 @@ a[name] {
 	position: relative;
 	top: 1px;
 }
+.github-button { background-image: url("../img/github-black.png"); }
+.linkedin-button { background-image: url("../img/linkedin-black.png"); }
+.twitter-button { background-image: url("../img/twitter-black.png"); }
+.social-button {
+	min-height: 28px;
+	padding-left: 28px;
+	background-repeat: no-repeat;
+}
+h1, h2, .h2, h3 {
+	&> a, &> a:active, &> a:hover, &> a:visited {
+		text-decoration: none;
+		color: #333333;
+		font-weight: normal;
+	}
+}
 /* /GENERAL */
 
 /* NAVIGATION */
@@ -85,8 +100,6 @@ a[name] {
 		padding: 0px;
 		.social-button {
 			float: right;
-			height: 28px;
-			width: 28px;
 			display: inline-block;
 			margin-left: 6px;
 		}
@@ -155,9 +168,9 @@ a[name] {
 		a:focus {
 			color: #404040 !important;
 		}
-		#github-button { background-image: url("../img/github-black.png"); }
-		#linkedin-button { background-image: url("../img/linkedin-black.png"); }
-		#twitter-button { background-image: url("../img/twitter-black.png"); }
+		.github-button { background-image: url("../img/github-black.png"); }
+		.linkedin-button { background-image: url("../img/linkedin-black.png"); }
+		.twitter-button { background-image: url("../img/twitter-black.png"); }
 	}
 
 	&.blue {
@@ -184,9 +197,9 @@ a[name] {
 		a:focus {
 			color: white !important;
 		}
-		#github-button { background-image: url("../img/github-white.png"); }
-		#linkedin-button { background-image: url("../img/linkedin-white.png"); }
-		#twitter-button { background-image: url("../img/twitter-white.png"); }
+		.github-button { background-image: url("../img/github-white.png"); }
+		.linkedin-button { background-image: url("../img/linkedin-white.png"); }
+		.twitter-button { background-image: url("../img/twitter-white.png"); }
 	}
 }
 
@@ -201,6 +214,7 @@ a[name] {
 	}
 	h1,
 	h2,
+	.h2,
 	h3 {
 		margin-left: 5%;
 		margin-right: 5%;
@@ -216,7 +230,7 @@ a[name] {
 		margin-bottom: 0.5em;
 	}
 
-	h2 {
+	h2, .h2 {
 		font-family: 'DIN Light', sans-serif;
 		font-style: italic;
 		font-size: 20pt;
@@ -249,58 +263,25 @@ a[name] {
 	background-size: 100% auto;
 	background-position: 50% 0px;
 
-	h1, h2 {
-		margin-left: 20%;
-		margin-right: 20%;
-	}
-
 	/* Portrait tablet to landscape and desktop */
-	@media (max-width: 1199px) {
-		background-size: 120%;
-		h1 {
-			margin-bottom: 0.1em;
-		}
-		h1, h2 {
-			margin-left: 10%;
-			margin-right: 10%;
-		}
+	@media (min-width: 1199px) {
+		background-size: 110% auto;
+		background-position: 100% -100px;
+	}
+	@media (max-width: 980px) {
+		background-position: 50% -15px;
+		background-size: auto;
 	}
 
 	/* Portrait tablet to landscape and desktop */
 	@media (min-width: 768px) and (max-width: 979px) {
-		background-position: 50% -100px;
-		h1 {
-			font-size: 58pt;
-		}
 	}
 
 	/* Landscape phone to portrait tablet */
 	@media (max-width: 767px) {
-		background-position: 70% 0px;
-		h1 {
-			font-size: 48pt;
-			max-width: 60%;
-		}
-		h1, h2 {
-			margin-left: 12%;
-			margin-right: 20%;
-		}
 	}
 
 	@media (max-width: 480px) {
-		background-size: 200%;
-		background-position: 40% -10px;
-		h1 {
-			font-size: 36pt;
-			max-width: 60%;
-		}
-		h2 {			
-			font-size: 16pt;
-		}
-		h1, h2 {
-			margin-left: 12%;
-			margin-right: 20%;
-		}
 	}
 
 	color: white;
@@ -328,7 +309,7 @@ a[name] {
 	.row-of-icons span {
 		padding-top: 1em;
 		font-family: 'DIN Light', sans-serif;
-		font-size: 23pt;
+		font-size: 20pt;
 		clear: left;
 		margin: 0px;
 		display: block;
@@ -355,10 +336,13 @@ a[name] {
 		.row-of-icons .understandable-icon img,
 		.row-of-icons .practical-icon img,
 		.row-of-icons .valuable-icon img {
-			margin: 1em 0;
+			margin: 1em;
+		}
+		.row-of-icons span {
+			padding-top: 0px;
 		}
 		.row-of-icons .plus-icon img {
-			margin: 30px 0;
+			margin: 2em 0;
 		}
 	}
 }
@@ -384,7 +368,7 @@ a[name] {
 	}
 }
 
-/* PAGE #3 */
+/* PAGE #4 */
 .page#page4 {
 	@media (min-width: 981px) {
 		background-image: url("../img/backgrounds/page4-1600.png");
@@ -399,6 +383,27 @@ a[name] {
 	background-position: 50% -20px;
 	background-size: 120%;
 	color: white;
+
+	h2 {
+		margin-bottom: 1em;
+	}
+}
+
+/* PAGE #5 */
+.page#page5 {
+	@media (min-width: 981px) {
+		background-image: url("../img/backgrounds/page5-1600.png");
+	}
+	@media (max-width: 980px) {
+		background-image: url("../img/backgrounds/page5-980.png");
+	}
+	background-color: #FFFFFF;
+	/* TODO: Remember to use a low-res when the screen is narrow */
+	background-repeat: no-repeat;
+	background-attachment: absolute;
+	background-position: 50% bottom;
+	background-size: auto;
+	color: black;
 
 	h2 {
 		margin-bottom: 1em;
