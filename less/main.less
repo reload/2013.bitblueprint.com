@@ -36,14 +36,21 @@ a[name] {
 	position: relative;
 	top: 1px;
 }
+
 .github-button { background-image: url("../img/github-black.png"); }
 .linkedin-button { background-image: url("../img/linkedin-black.png"); }
 .twitter-button { background-image: url("../img/twitter-black.png"); }
+
+.github-button:hover { background-image: url("../img/github-blue.png") !important; }
+.linkedin-button:hover { background-image: url("../img/linkedin-blue.png") !important; }
+.twitter-button:hover { background-image: url("../img/twitter-blue.png") !important; }
+
 .social-button {
 	min-height: 28px;
 	padding-left: 28px;
 	background-repeat: no-repeat;
 }
+
 h1, h2, .h2, h3 {
 	&> a, &> a:active, &> a:hover, &> a:visited {
 		text-decoration: none;
@@ -200,6 +207,11 @@ h1, h2, .h2, h3 {
 		.github-button { background-image: url("../img/github-white.png"); }
 		.linkedin-button { background-image: url("../img/linkedin-white.png"); }
 		.twitter-button { background-image: url("../img/twitter-white.png"); }
+	}
+	&.blue, &.marine {
+		.github-button:hover { background-image: url("../img/github-black.png") !important; }
+		.linkedin-button:hover { background-image: url("../img/linkedin-black.png") !important; }
+		.twitter-button:hover { background-image: url("../img/twitter-black.png") !important; }
 	}
 }
 
