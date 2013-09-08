@@ -13,11 +13,10 @@
 		var hash = $(e.target).attr("href");
 		if(!hash) hash = "";
 		hash = hash.substring(1);
-		$.scrollTo("a[name='"+ hash +"']", 300, {offset: {top: 0}});
+		$.scrollTo("a[name='"+ hash +"']", 500, {offset: {top: 0}});
 	});
 
 	function updateCurrentAnchor() {
-		console.log("updateCurrentAnchor called ...");
 		var scrollTop = $(window).scrollTop();
 		var navbarHeight = $("body > .navbar").height();
 		// Remember the previous anchor for comparison.
@@ -30,10 +29,9 @@
 				$currentAnchor = $(this);
 			}
 		});
-		console.log("$currentAnchor = ", $currentAnchor.get(0));
 		// Update the anchor.
 		$(window).data('currentAnchor', $currentAnchor);
-		if($currentAnchor && ($previousAnchor == null || !$previousAnchor.is($currentAnchor))) {
+		if($previousAnchor && $currentAnchor && ($previousAnchor == null || !$previousAnchor.is($currentAnchor))) {
 			if(history.pushState) { // check if the browser supports the pushState
 				// Update the hash.
 				history.pushState({}, "", "#"+$currentAnchor.attr("name"));

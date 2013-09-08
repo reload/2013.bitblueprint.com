@@ -5,10 +5,10 @@ build: update-bootstrap
 	@echo "All done ... "
 
 update-bootstrap: bootstrap-git-update overwrite-variables
-	cd bootstrap && make clean; make bootstrap
-	cp -f bootstrap/bootstrap/css/*.css ./css
-	cp -f bootstrap/bootstrap/js/*.js ./js
-	cp -f bootstrap/bootstrap/img/* ./img
+	cd bootstrap && grunt dist
+	cp -f bootstrap/dist/css/*.css ./css
+	cp -f bootstrap/dist/js/*.js ./js
+	cp -f bootstrap/dist/fonts/* ./fonts
 
 overwrite-variables:
 	cp -f less/variables.less bootstrap/less/

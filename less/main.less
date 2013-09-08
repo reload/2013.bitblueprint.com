@@ -19,8 +19,10 @@
 	font-family: 'DIN', sans-serif;
 }
 
-.row-fluid [class*="span"].offset-one-half {
-	margin-left: 5.555555555555555%;
+@media (min-width: 992px) {
+	.col-md-offset-1-half {
+		margin-left: 4.166666666667%;
+	}
 }
 @media (max-width: 767px) {
 	body {
@@ -34,16 +36,16 @@ a[name] {
 	display: block;
 	height: 0px;
 	position: relative;
-	top: 0px;
+	top: 1px;
 }
 
-.github-button { background-image: url("../img/github-black.png"); }
-.linkedin-button { background-image: url("../img/linkedin-black.png"); }
-.twitter-button { background-image: url("../img/twitter-black.png"); }
+.github-button { background-image: url("../img/github-black-compressed.png"); }
+.linkedin-button { background-image: url("../img/linkedin-black-compressed.png"); }
+.twitter-button { background-image: url("../img/twitter-black-compressed.png"); }
 
-.github-button:hover { background-image: url("../img/github-blue.png") !important; }
-.linkedin-button:hover { background-image: url("../img/linkedin-blue.png") !important; }
-.twitter-button:hover { background-image: url("../img/twitter-blue.png") !important; }
+.github-button:hover { background-image: url("../img/github-blue-compressed.png") !important; }
+.linkedin-button:hover { background-image: url("../img/linkedin-blue-compressed.png") !important; }
+.twitter-button:hover { background-image: url("../img/twitter-blue-compressed.png") !important; }
 
 .social-button {
 	min-height: 28px;
@@ -156,7 +158,7 @@ h1, h2, .h2, h3 {
 		margin-left: 6px;
 	}
 
-	&.navbar-fixed-top .container {
+	& .container {
 		width: 100%;
 	}
 
@@ -165,9 +167,9 @@ h1, h2, .h2, h3 {
 	&.white {
 		background-color: rgba(255, 255, 255, 0.3);
 		.brand {
-			background-image: url("../img/logo-black.png");
+			background-image: url("../img/logo-black-compressed.png");
 			@media(max-width: 480px) {
-				background-image: url("../img/logo-black-small.png");
+				background-image: url("../img/logo-black-small-compressed.png");
 			}
 		}
 		a,
@@ -175,9 +177,9 @@ h1, h2, .h2, h3 {
 		a:focus {
 			color: #404040 !important;
 		}
-		.github-button { background-image: url("../img/github-black.png"); }
-		.linkedin-button { background-image: url("../img/linkedin-black.png"); }
-		.twitter-button { background-image: url("../img/twitter-black.png"); }
+		.github-button { background-image: url("../img/github-black-compressed.png"); }
+		.linkedin-button { background-image: url("../img/linkedin-black-compressed.png"); }
+		.twitter-button { background-image: url("../img/twitter-black-compressed.png"); }
 	}
 
 	&.blue {
@@ -194,9 +196,9 @@ h1, h2, .h2, h3 {
 
 	&.blue, &.marine, &.black {
 		.brand {
-			background-image: url("../img/logo-white.png");
+			background-image: url("../img/logo-white-compressed.png");
 			@media(max-width: 480px) {
-				background-image: url("../img/logo-white-small.png");
+				background-image: url("../img/logo-white-small-compressed.png");
 			}
 		}
 		a,
@@ -204,14 +206,14 @@ h1, h2, .h2, h3 {
 		a:focus {
 			color: white !important;
 		}
-		.github-button { background-image: url("../img/github-white.png"); }
-		.linkedin-button { background-image: url("../img/linkedin-white.png"); }
-		.twitter-button { background-image: url("../img/twitter-white.png"); }
+		.github-button { background-image: url("../img/github-white-compressed.png"); }
+		.linkedin-button { background-image: url("../img/linkedin-white-compressed.png"); }
+		.twitter-button { background-image: url("../img/twitter-white-compressed.png"); }
 	}
 	&.blue, &.marine {
-		.github-button:hover { background-image: url("../img/github-black.png") !important; }
-		.linkedin-button:hover { background-image: url("../img/linkedin-black.png") !important; }
-		.twitter-button:hover { background-image: url("../img/twitter-black.png") !important; }
+		.github-button:hover { background-image: url("../img/github-black-compressed.png") !important; }
+		.linkedin-button:hover { background-image: url("../img/linkedin-black-compressed.png") !important; }
+		.twitter-button:hover { background-image: url("../img/twitter-black-compressed.png") !important; }
 	}
 }
 
@@ -264,10 +266,10 @@ h1, h2, .h2, h3 {
 
 .page#page1 {
 	@media (min-width: 981px) {
-		background-image: url("../img/backgrounds/page1-1600.png");
+		background-image: url("../img/backgrounds/page1-compressed-1600.png");
 	}
 	@media (max-width: 980px) {
-		background-image: url("../img/backgrounds/page1-980.png");
+		background-image: url("../img/backgrounds/page1-compressed-980.png");
 	}
 
 	background-repeat: no-repeat;
@@ -362,10 +364,10 @@ h1, h2, .h2, h3 {
 /* PAGE #3 */
 .page#page3 {
 	@media (min-width: 981px) {
-		background-image: url("../img/backgrounds/page3-1600.png");
+		background-image: url("../img/backgrounds/page3-compressed-1600.png");
 	}
 	@media (max-width: 980px) {
-		background-image: url("../img/backgrounds/page3-980.png");
+		background-image: url("../img/backgrounds/page3-compressed-980.png");
 	}
 	background-color: black;
 	/* TODO: Remember to use a low-res when the screen is narrow */
@@ -383,10 +385,10 @@ h1, h2, .h2, h3 {
 /* PAGE #4 */
 .page#page4 {
 	@media (min-width: 981px) {
-		background-image: url("../img/backgrounds/page4-1600.png");
+		background-image: url("../img/backgrounds/page4-compressed-1600.png");
 	}
 	@media (max-width: 980px) {
-		background-image: url("../img/backgrounds/page4-980.png");
+		background-image: url("../img/backgrounds/page4-compressed-980.png");
 	}
 	background-color: #01173b;
 	/* TODO: Remember to use a low-res when the screen is narrow */
@@ -404,10 +406,10 @@ h1, h2, .h2, h3 {
 /* PAGE #5 */
 .page#page5 {
 	@media (min-width: 981px) {
-		background-image: url("../img/backgrounds/page5-1600.png");
+		background-image: url("../img/backgrounds/page5-compressed-1600.png");
 	}
 	@media (max-width: 980px) {
-		background-image: url("../img/backgrounds/page5-980.png");
+		background-image: url("../img/backgrounds/page5-compressed-980.png");
 	}
 	background-color: #FFFFFF;
 	/* TODO: Remember to use a low-res when the screen is narrow */
