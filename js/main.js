@@ -25,8 +25,7 @@
 	});
 
 	function updateCurrentAnchor() {
-		var scrollToActive = $(window).data('scrollToActive') == true;
-		if(!scrollToActive) {
+		if($(window).data('scrollToActive') != true) {
 			var scrollTop = $(window).scrollTop();
 			var navbarHeight = $("body > .navbar").height();
 			// Remember the previous anchor for comparison.
@@ -59,11 +58,11 @@
 		updateCurrentAnchor();
 		var $currentAnchor = $(window).data('currentAnchor');
 		// If the current anchor has changed due to an ajustment in page height ..
-		$(window).data('scrollToActive', true);
 		if($previousAnchor && !$previousAnchor.is($currentAnchor)) {
+			$(window).data('scrollToActive', true);
 			// Scroll to the previousAnchor.
 			$.scrollTo($previousAnchor, 0, {
-				offset: {top: 0},
+				offset: { top: 0 },
 				onAfter: function() {
 					$(window).data('scrollToActive', false);
 					updateCurrentAnchor();
