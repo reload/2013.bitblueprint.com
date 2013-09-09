@@ -84,7 +84,9 @@
 		$("body > .navbar").removeClass("white blue marine black").addClass(navbarColor);
 	}
 	
-	$(window).get(0).addEventListener('gesturechange', function() {});
+	$(window).get(0).addEventListener('gesturechange', function() {
+		window.title = "!!";
+	});
 	$(window).data('scrollToActive', false);
 	$(window).scroll(updateCurrentAnchor);
 	$(window).resize(adjustPageHeights).resize();
