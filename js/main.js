@@ -84,8 +84,8 @@
 		$("body > .navbar").removeClass("white blue marine black").addClass(navbarColor);
 	}
 	
-	$(window).get(0).addEventListener('gesturechange', function() {
-		window.title = "!!";
+	$(window).live('gesturechange', function() {
+		document.title = "!!";
 	});
 	$(window).data('scrollToActive', false);
 	$(window).scroll(updateCurrentAnchor);
