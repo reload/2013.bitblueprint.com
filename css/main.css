@@ -85,27 +85,27 @@ a[name] {
 }
 
 .github-button {
-  background-image: url("../img/github-black.png");
+  background-image: url("../img/github-black-compressed.png");
 }
 
 .linkedin-button {
-  background-image: url("../img/linkedin-black.png");
+  background-image: url("../img/linkedin-black-compressed.png");
 }
 
 .twitter-button {
-  background-image: url("../img/twitter-black.png");
+  background-image: url("../img/twitter-black-compressed.png");
 }
 
 .github-button:hover {
-  background-image: url("../img/github-blue.png") !important;
+  background-image: url("../img/github-blue-compressed.png") !important;
 }
 
 .linkedin-button:hover {
-  background-image: url("../img/linkedin-blue.png") !important;
+  background-image: url("../img/linkedin-blue-compressed.png") !important;
 }
 
 .twitter-button:hover {
-  background-image: url("../img/twitter-blue.png") !important;
+  background-image: url("../img/twitter-blue-compressed.png") !important;
 }
 
 .social-button {
@@ -141,6 +141,7 @@ h3 > a:visited {
 
 .navbar {
   position: fixed;
+  top: 0;
   right: 0;
   left: 0;
   z-index: 1030;
@@ -150,8 +151,6 @@ h3 > a:visited {
       -ms-transition: all ease-in-out 0.1s;
        -o-transition: all ease-in-out 0.1s;
           transition: all ease-in-out 0.1s;
-  /* Colors */
-
 }
 
 .navbar .navbar-inner {
@@ -252,12 +251,12 @@ h3 > a:visited {
 }
 
 .navbar.white .brand {
-  background-image: url("../img/logo-black.png");
+  background-image: url("../img/logo-black-compressed.png");
 }
 
 @media (max-width: 480px) {
   .navbar.white .brand {
-    background-image: url("../img/logo-black-small.png");
+    background-image: url("../img/logo-black-small-compressed.png");
   }
 }
 
@@ -268,15 +267,15 @@ h3 > a:visited {
 }
 
 .navbar.white .github-button {
-  background-image: url("../img/github-black.png");
+  background-image: url("../img/github-black-compressed.png");
 }
 
 .navbar.white .linkedin-button {
-  background-image: url("../img/linkedin-black.png");
+  background-image: url("../img/linkedin-black-compressed.png");
 }
 
 .navbar.white .twitter-button {
-  background-image: url("../img/twitter-black.png");
+  background-image: url("../img/twitter-black-compressed.png");
 }
 
 .navbar.blue {
@@ -294,14 +293,14 @@ h3 > a:visited {
 .navbar.blue .brand,
 .navbar.marine .brand,
 .navbar.black .brand {
-  background-image: url("../img/logo-white.png");
+  background-image: url("../img/logo-white-compressed.png");
 }
 
 @media (max-width: 480px) {
   .navbar.blue .brand,
   .navbar.marine .brand,
   .navbar.black .brand {
-    background-image: url("../img/logo-white-small.png");
+    background-image: url("../img/logo-white-small-compressed.png");
   }
 }
 
@@ -320,34 +319,34 @@ h3 > a:visited {
 .navbar.blue .github-button,
 .navbar.marine .github-button,
 .navbar.black .github-button {
-  background-image: url("../img/github-white.png");
+  background-image: url("../img/github-white-compressed.png");
 }
 
 .navbar.blue .linkedin-button,
 .navbar.marine .linkedin-button,
 .navbar.black .linkedin-button {
-  background-image: url("../img/linkedin-white.png");
+  background-image: url("../img/linkedin-white-compressed.png");
 }
 
 .navbar.blue .twitter-button,
 .navbar.marine .twitter-button,
 .navbar.black .twitter-button {
-  background-image: url("../img/twitter-white.png");
+  background-image: url("../img/twitter-white-compressed.png");
 }
 
 .navbar.blue .github-button:hover,
 .navbar.marine .github-button:hover {
-  background-image: url("../img/github-black.png") !important;
+  background-image: url("../img/github-black-compressed.png") !important;
 }
 
 .navbar.blue .linkedin-button:hover,
 .navbar.marine .linkedin-button:hover {
-  background-image: url("../img/linkedin-black.png") !important;
+  background-image: url("../img/linkedin-black-compressed.png") !important;
 }
 
 .navbar.blue .twitter-button:hover,
 .navbar.marine .twitter-button:hover {
-  background-image: url("../img/twitter-black.png") !important;
+  background-image: url("../img/twitter-black-compressed.png") !important;
 }
 
 /* /NAVIGATION */
@@ -409,13 +408,13 @@ h3 > a:visited {
 
 @media (min-width: 981px) {
   .page#page1 {
-    background-image: url("../img/backgrounds/page1-1600.png");
+    background-image: url("../img/backgrounds/page1-compressed-1600.png");
   }
 }
 
 @media (max-width: 980px) {
   .page#page1 {
-    background-image: url("../img/backgrounds/page1-980.png");
+    background-image: url("../img/backgrounds/page1-compressed-980.png");
   }
 }
 
@@ -520,13 +519,13 @@ h3 > a:visited {
 
 @media (min-width: 981px) {
   .page#page3 {
-    background-image: url("../img/backgrounds/page3-1600.png");
+    background-image: url("../img/backgrounds/page3-compressed-1600.png");
   }
 }
 
 @media (max-width: 980px) {
   .page#page3 {
-    background-image: url("../img/backgrounds/page3-980.png");
+    background-image: url("../img/backgrounds/page3-compressed-980.png");
   }
 }
 
@@ -547,13 +546,13 @@ h3 > a:visited {
 
 @media (min-width: 981px) {
   .page#page4 {
-    background-image: url("../img/backgrounds/page4-1600.png");
+    background-image: url("../img/backgrounds/page4-compressed-1600.png");
   }
 }
 
 @media (max-width: 980px) {
   .page#page4 {
-    background-image: url("../img/backgrounds/page4-980.png");
+    background-image: url("../img/backgrounds/page4-compressed-980.png");
   }
 }
 
@@ -574,13 +573,13 @@ h3 > a:visited {
 
 @media (min-width: 981px) {
   .page#page5 {
-    background-image: url("../img/backgrounds/page5-1600.png");
+    background-image: url("../img/backgrounds/page5-compressed-1600.png");
   }
 }
 
 @media (max-width: 980px) {
   .page#page5 {
-    background-image: url("../img/backgrounds/page5-980.png");
+    background-image: url("../img/backgrounds/page5-compressed-980.png");
   }
 }
 
