@@ -16,6 +16,7 @@
 
 		$(window).data('scrollToActive', true);
 		$.scrollTo("a[name='"+ hash +"']", 500, {
+			axis : 'y',
 			offset: {top: 0},
 			onAfter: function() {
 				$(window).data('scrollToActive', false);
@@ -62,6 +63,7 @@
 			$(window).data('scrollToActive', true);
 			// Scroll to the previousAnchor.
 			$.scrollTo($previousAnchor, 0, {
+				axis : 'y',
 				offset: { top: 0 },
 				onAfter: function() {
 					$(window).data('scrollToActive', false);
