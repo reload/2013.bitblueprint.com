@@ -1,11 +1,16 @@
 (function($) {
-	// Old code.
-	// var hash = location.hash.substring(1);
-	// var $anchor = $("a[name='"+ hash +"']");
-	// $(window).data('currentAnchor', $anchor);
-	// Scroll the anchor in previous focus.
-	// $.scrollTo($anchor, 0, {offset: {top: -1}});
-	// updateNavbar();
+	$.fn.randomize = function(selector) {
+		var $elems = selector ? $(this).find(selector) : $(this).children(),
+		$parents = $elems.parent();
+
+		$parents.each(function(){
+			$(this).children(selector).sort(function(){
+				return Math.round(Math.random()) - 0.5;
+			}).remove().appendTo(this);
+		});
+
+		return this;
+	};
 
 	function updateCurrentAnchor() {
 		if($(window).data('isScrolling') != true) {
@@ -29,6 +34,7 @@
 					history.pushState({}, "", "#"+$currentAnchor.attr("name"));
 				}
 				updateNavbar();
+				updateDocumentTitle();
 			}
 		}
 	}
@@ -65,6 +71,25 @@
 		$("body > .navbar").removeClass("white blue marine black").addClass(navbarColor);
 	}
 
+	function updateDocumentTitle() {
+		var originalTitle = $(document).data("original-title");
+		// Has the original title been extracted?
+		if(!originalTitle) {
+			originalTitle = document.title;
+			// Save
+			$(document).data("original-title", originalTitle);
+		}
+		// Get the current anchor from the window's data.
+		var $currentAnchor = $(window).data('currentAnchor');
+		// What is the title?
+		var title = $currentAnchor.data("title");
+		if(title) {
+			document.title = originalTitle + " - " + title;
+		} else {
+			document.title = originalTitle;
+		}
+	}
+
 	// When some link with a href starting with the # is clicked.
 	$("a[href^='#']").click(function(e) {
 		e.preventDefault();
@@ -86,4 +111,7 @@
 	$(window).data('isScrolling', false);
 	$(window).scroll(updateCurrentAnchor);
 	$(window).resize(adjustPageHeights).resize();
+
+	// Scramble profiles ...
+	$("#page5").randomize(".person");
 })(jQuery);

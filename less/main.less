@@ -42,10 +42,12 @@ a[name] {
 .github-button { background-image: url("../img/github-black-compressed.png"); }
 .linkedin-button { background-image: url("../img/linkedin-black-compressed.png"); }
 .twitter-button { background-image: url("../img/twitter-black-compressed.png"); }
+.behance-button { background-image: url("../img/behance-black-compressed.png"); }
 
 .github-button:hover { background-image: url("../img/github-blue-compressed.png") !important; }
 .linkedin-button:hover { background-image: url("../img/linkedin-blue-compressed.png") !important; }
 .twitter-button:hover { background-image: url("../img/twitter-blue-compressed.png") !important; }
+.behance-button:hover { background-image: url("../img/behance-blue-compressed.png") !important; }
 
 .social-button {
 	min-height: 28px;
@@ -226,14 +228,16 @@ h1, h2, .h2, h3 {
 		padding-top: 70px;
 		padding-bottom: 70px;
 		width: 100%;
-	}
-	h1,
-	h2,
-	.h2,
-	h3 {
-		margin-left: 5%;
-		margin-right: 5%;
-		line-height: 90%;
+
+		/* headers as direct children. */
+		&> h1,
+		&> h2,
+		&> .h2,
+		&> h3 {
+			margin-left: 5%;
+			margin-right: 5%;
+			line-height: 90%;
+		}
 	}
 
 	h1 {
@@ -375,7 +379,7 @@ h1, h2, .h2, h3 {
 	background-repeat: no-repeat;
 	background-attachment: absolute;
 	background-position: 50% -20px;
-	background-size: 120%;
+	background-size: 100%;
 	color: white;
 
 	h2 {
@@ -404,13 +408,56 @@ h1, h2, .h2, h3 {
 	}
 }
 
-/* PAGE #5 */
 .page#page5 {
+	.person {
+		clear: both;
+		margin-bottom: 1em;
+
+		.clearfix {
+			clear: both;
+		}
+
+		a, p {
+			font-family: 'DIN Light', sans-serif;
+		}
+		.social-button {
+			display: inline-block;
+			margin-top: 0.2em;
+		}
+		img.profile {
+			display: inline-block;
+			float: left;
+			margin-right: 1em;
+		}
+		p {
+		}
+		/* Landscape phone to portrait tablet */
+		@media (max-width: 767px) {
+			img.profile {
+				/* horizontally centered */
+				display: block;
+				margin: 0 auto 1em auto;
+				float: none;
+			}
+			p {
+				clear: both;
+			}
+		}
+
+		.person-link {
+			position: relative;
+			top: -70px;
+		}
+	}
+}
+
+/* PAGE #6 */
+.page#page6 {
 	@media (min-width: 981px) {
-		background-image: url("../img/backgrounds/page5-compressed-1600.png");
+		background-image: url("../img/backgrounds/page6-compressed-1600.png");
 	}
 	@media (max-width: 980px) {
-		background-image: url("../img/backgrounds/page5-compressed-980.png");
+		background-image: url("../img/backgrounds/page6-compressed-980.png");
 	}
 	background-color: #FFFFFF;
 	/* TODO: Remember to use a low-res when the screen is narrow */
