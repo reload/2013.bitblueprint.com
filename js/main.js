@@ -21,6 +21,7 @@
 			onAfter: function() {
 				$(window).data('scrollToActive', false);
 				updateCurrentAnchor();
+				updateNavbar();
 			}
 		});
 	});
@@ -83,6 +84,7 @@
 		$("body > .navbar").removeClass("white blue marine black").addClass(navbarColor);
 	}
 	
+	$(window).get(0).addEventListener('gesturechange', function() {});
 	$(window).data('scrollToActive', false);
 	$(window).scroll(updateCurrentAnchor);
 	$(window).resize(adjustPageHeights).resize();
