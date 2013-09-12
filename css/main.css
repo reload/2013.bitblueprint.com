@@ -416,7 +416,6 @@ h3 > a:visited {
   top: 25%;
   left: 50%;
   z-index: 1040;
-  display: none;
   max-width: 900px;
   margin-left: -450px;
   background-color: #ffffff;
