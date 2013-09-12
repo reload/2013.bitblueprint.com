@@ -96,6 +96,10 @@ a[name] {
   background-image: url("../img/twitter-black-compressed.png");
 }
 
+.behance-button {
+  background-image: url("../img/behance-black-compressed.png");
+}
+
 .github-button:hover {
   background-image: url("../img/github-blue-compressed.png") !important;
 }
@@ -106,6 +110,10 @@ a[name] {
 
 .twitter-button:hover {
   background-image: url("../img/twitter-blue-compressed.png") !important;
+}
+
+.behance-button:hover {
+  background-image: url("../img/behance-blue-compressed.png") !important;
 }
 
 .social-button {
@@ -353,22 +361,28 @@ h3 > a:visited {
 
 /* PAGES-GENERAL */
 
-.page .container {
+.page .container,
+.modal-overlay .container {
   width: 100%;
   padding-top: 70px;
   padding-bottom: 70px;
 }
 
-.page h1,
-.page h2,
-.page .h2,
-.page h3 {
+.page .container > h1,
+.modal-overlay .container > h1,
+.page .container > h2,
+.modal-overlay .container > h2,
+.page .container > .h2,
+.modal-overlay .container > .h2,
+.page .container > h3,
+.modal-overlay .container > h3 {
   margin-right: 5%;
   margin-left: 5%;
   line-height: 90%;
 }
 
-.page h1 {
+.page h1,
+.modal-overlay h1 {
   margin-top: 0.6em;
   margin-bottom: 0.5em;
   font-family: 'DIN UltraLight', sans-serif;
@@ -378,7 +392,9 @@ h3 > a:visited {
 }
 
 .page h2,
-.page .h2 {
+.modal-overlay h2,
+.page .h2,
+.modal-overlay .h2 {
   font-family: 'DIN Light', sans-serif;
   font-size: 20pt;
   font-style: italic;
@@ -387,12 +403,42 @@ h3 > a:visited {
 }
 
 @media (max-width: 480px) {
-  .page h1 {
+  .page h1,
+  .modal-overlay h1 {
     font-size: 50pt;
   }
 }
 
 /* /PAGES-GENERAL */
+
+.modal-overlay {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  z-index: 1040;
+  display: none;
+  max-width: 900px;
+  margin-left: -450px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 50px 0px #000000;
+     -moz-box-shadow: 0px 0px 50px 0px #000000;
+          box-shadow: 0px 0px 50px 0px #000000;
+}
+
+@media (max-width: 1000px) {
+  .modal-overlay {
+    display: none !important;
+  }
+}
+
+.modal-overlay .container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.modal-overlay .row * {
+  text-align: center;
+}
 
 /* PAGE-CUSTOMIZATION */
 
@@ -514,7 +560,7 @@ h3 > a:visited {
   background-color: black;
   background-position: 50% -20px;
   background-repeat: no-repeat;
-  background-size: 120%;
+  background-size: 100%;
 }
 
 @media (min-width: 981px) {
@@ -560,9 +606,50 @@ h3 > a:visited {
   margin-bottom: 1em;
 }
 
-/* PAGE #5 */
+.page#page5 .person {
+  margin-bottom: 1em;
+  clear: both;
+}
 
-.page#page5 {
+.page#page5 .person .clearfix {
+  clear: both;
+}
+
+.page#page5 .person a,
+.page#page5 .person p {
+  font-family: 'DIN Light', sans-serif;
+}
+
+.page#page5 .person .social-button {
+  display: inline-block;
+  margin-top: 0.2em;
+}
+
+.page#page5 .person img.profile {
+  display: inline-block;
+  float: left;
+  margin-right: 1em;
+}
+
+@media (max-width: 767px) {
+  .page#page5 .person img.profile {
+    display: block;
+    float: none;
+    margin: 0 auto 1em auto;
+  }
+  .page#page5 .person p {
+    clear: both;
+  }
+}
+
+.page#page5 .person .person-link {
+  position: relative;
+  top: -70px;
+}
+
+/* PAGE #6 */
+
+.page#page6 {
   color: black;
   background-attachment: absolute;
   background-color: #FFFFFF;
@@ -572,22 +659,22 @@ h3 > a:visited {
 }
 
 @media (min-width: 981px) {
-  .page#page5 {
-    background-image: url("../img/backgrounds/page5-compressed-1600.png");
+  .page#page6 {
+    background-image: url("../img/backgrounds/page6-compressed-1600.png");
   }
 }
 
 @media (max-width: 980px) {
-  .page#page5 {
-    background-image: url("../img/backgrounds/page5-compressed-980.png");
+  .page#page6 {
+    background-image: url("../img/backgrounds/page6-compressed-980.png");
   }
 }
 
-.page#page5 a {
+.page#page6 a {
   font-family: 'DIN Light', sans-serif;
 }
 
-.page#page5 a:hover {
+.page#page6 a:hover {
   color: #0067dd !important;
 }
 
