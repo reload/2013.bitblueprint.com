@@ -114,4 +114,23 @@
 
 	// Scramble profiles ...
 	$("#page5").randomize(".person");
+
+	/* ====== Modals - START ====== */
+	// Clicking anywhere makes all visible modals fade out.
+	$(document).on("click", function(e) {
+		// If any modal is open, if so - close it.
+		$(".modal-overlay:visible").fadeOut();
+	});
+	// Prevent clicks in modals to propagate.
+	$(".modal-overlay").on("click", function(e) {
+		// Prevent from propagating.
+		e.stopPropagation();
+	});
+	// Right-clicking the brand of the navbar makes the logo-download modal fade in.
+	$(".navbar .brand").bind('contextmenu', function(e) {
+		e.preventDefault();
+		$("#logo-download").fadeIn();
+	});
+	/* ====== Modals - END ====== */
+
 })(jQuery);
