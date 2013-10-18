@@ -559,7 +559,7 @@ h3 > a:visited {
   background-color: black;
   background-position: 50% -20px;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 120%;
 }
 
 @media (min-width: 981px) {
@@ -586,7 +586,7 @@ h3 > a:visited {
   background-color: #01173b;
   background-position: 50% -20px;
   background-repeat: no-repeat;
-  background-size: 120%;
+  background-size: 100%;
 }
 
 @media (min-width: 981px) {
@@ -599,6 +599,10 @@ h3 > a:visited {
   .page#page4 {
     background-image: url("../img/backgrounds/page4-compressed-980.png");
   }
+}
+
+.page#page4 .container {
+  padding-top: 10em;
 }
 
 .page#page4 h2 {
