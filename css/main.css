@@ -291,7 +291,7 @@ h3 > a:visited {
 }
 
 .navbar.marine {
-  background-color: rgba(106, 142, 236, 0.3);
+  background-color: rgba(95, 144, 192, 0.3);
 }
 
 .navbar.black {
@@ -583,8 +583,8 @@ h3 > a:visited {
 .page#page4 {
   color: white;
   background-attachment: absolute;
-  background-color: #01173b;
-  background-position: 50% -20px;
+  background-color: #5f90c0;
+  background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: 100%;
 }
