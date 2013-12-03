@@ -584,7 +584,7 @@ h3 > a:visited {
   color: white;
   background-attachment: absolute;
   background-color: #5f90c0;
-  background-position: 50% 100%;
+  background-position: 100% 33%;
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -598,6 +598,12 @@ h3 > a:visited {
 @media (max-width: 980px) {
   .page#page4 {
     background-image: url("../img/backgrounds/page4-compressed-980.png");
+  }
+}
+
+@media (max-width: 980px) {
+  .page#page4 {
+    background-position: 100% bottom;
   }
 }
 
